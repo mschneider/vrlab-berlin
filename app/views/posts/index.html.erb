@@ -1,0 +1,31 @@
+<div id="navbar">
+  <div id="logo-link">
+    <a href="/">
+      <img src="/logo.png">
+    </a>
+  </div>
+  <div id="text-links">
+      <a href="/">works</a>
+      <a href="https://www.facebook.com/groups/berlinvr/">discuss</a>
+      <a href="http://www.meetup.com/Berlin-Oculus-Rift-VR-Meetup/">meetup</a>
+      <a href="/">about</a>
+  </div>
+</div>
+
+<header>
+</header>
+
+<section id="posts">
+  <% @posts.each do |post| %>
+    <article class="post">
+      <h1>
+        <%= link_to post.title, post.image.url %>
+      </h1>
+      <%= image_tag(post.image) %>
+      <span>
+        <%= link_to post.teaser, post.image.url %>
+      </span>
+    </article>
+  <% end %>
+</section>
+
