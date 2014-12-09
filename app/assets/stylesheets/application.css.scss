@@ -44,7 +44,7 @@
     vertical-align: bottom;
     a {
       color: white;
-      font: 2.6em "Futura";
+      font: 2.6em $header-font-family;
       display: inline-block;
       width: golden_ratio(100vw, -1)  * 0.9 / 4;
       text-align: center;
@@ -74,14 +74,14 @@ section#posts {
   @include outer-container;
 
   article {
-    @include span-columns(11);
+    @include span-columns(16);
 
     border: 1px solid white;
     box-shadow:  0px 0px 5vw -2.7vw rgba(0,0,0,0.75);
     h1, span {
       margin: 0.67em 1em;
       display: inline-block;
-      font-family: "Futura";
+      font-family: $header-font-family;
     }
   }
 
@@ -89,7 +89,7 @@ section#posts {
 
     article {
       margin-top: golden_ratio(em(250px), -2);
-      @include span-columns(5);
+      @include span-columns(10);
       @include shift(3);
 
       img {
